@@ -9,6 +9,14 @@ up:
 	fi
 	docker-compose up -d;
 
+.PHONY: start
+start:
+	docker-compose start ${CONTAINER_NAME};
+
+.PHONY: stop
+stop:
+	docker-compose stop ${CONTAINER_NAME};
+
 .PHONY: down
 down:
 	docker-compose down -v
